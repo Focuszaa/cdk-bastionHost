@@ -5,7 +5,6 @@ export class Cdk2Stack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-
     // Get vpc name
     const defaultvpc =  ec2.Vpc.fromLookup(this, 'mainVpc', { isDefault: true })
     const defaultInstance = ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.NANO);
